@@ -56,7 +56,7 @@ export default ({ roundedHeaderButton }) => {
     params.append('email', email);
     params.append('list', '496065');
     const url = `https://api.sendfox.com/contacts?${params.toString()}`;
-    console.log(`${process.env.REACT_APP_SENDFOX_TOKEN}`);
+    
     const response = await fetch(url, {
       method: 'POST',
       mode: 'no-cors',
