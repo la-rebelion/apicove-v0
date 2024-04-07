@@ -75,7 +75,6 @@ export default ({ roundedHeaderButton }) => {
       alert('Email submitted successfully!');
       setEmail('');
     } else {
-      console.log(response);
       alert('There was an error. Please try again.');
     }
   }
