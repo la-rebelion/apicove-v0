@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# API Cove
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+APICove is a hub for industry standard APIs. It is a platform that provides a list of APIs that are widely used in the industry. It provides a brief description of the APIs and their use cases. It also provides a link to the official documentation of the APIs.
+
+Different to other API directories, APICove focuses on APIs that are widely used in the industry. It provides a curated list of APIs that are essential for developers to know. The goal of APICove is to provide a platform where developers can find the most important APIs in one place, but not only the documentation, it provides Simulators to test the APIs and also provides a list of tutorials and resources to learn more about the APIs.
+
+Is there an API that you think should be included in the list? Feel free to create a pull request and add it to the list.
+
+---
 
 ## Available Scripts
 
@@ -18,6 +24,16 @@ You may also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### Deployment
+
+GitHub Pages is used to deploy the app. The app is deployed to the following URL: [https://apicove.github.io/apicove/](https://apicove.github.io/apicove/)
+
+To deploy the app, run the following command:
+
+```bash
+USE_SSH=true yarn deploy
+```
 
 ### `yarn build`
 
