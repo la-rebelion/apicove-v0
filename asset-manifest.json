@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.5bc4f6bc.css",
-    "main.js": "/static/js/main.d244587b.js",
+    "main.js": "/static/js/main.aa943cec.js",
     "static/js/453.2ec29648.chunk.js": "/static/js/453.2ec29648.chunk.js",
     "static/media/industry-standard-transparent.svg": "/static/media/industry-standard-transparent.c516378e48408ea4c8b67e0c2a1ccd1c.svg",
     "static/media/stats-illustration.svg": "/static/media/stats-illustration.89e20edcbf2cccadc1f28b4a73a486ac.svg",
@@ -38,15 +38,15 @@
     "static/media/star-icon.svg": "/static/media/star-icon.38c390e6157f5d50ed3352f1a73ca7ee.svg",
     "static/media/minus.svg": "/static/media/minus.595a628f1d89b51f5ee67012ae076ac8.svg",
     "static/media/fast-icon.svg": "/static/media/fast-icon.dbb971a73d4805d2fc3bcdacdb55beba.svg",
-    "static/media/facebook-icon.svg": "/static/media/facebook-icon.8f6512c4ee4f21763666f0f3b69d970d.svg",
+    "static/media/linkedin-icon.svg": "/static/media/linkedin-icon.962df6cec61e5366889690a28a03b953.svg",
     "static/media/arrow-left-3-icon.svg": "/static/media/arrow-left-3-icon.d48c6bae447f4492e1860f8a253007c8.svg",
     "static/media/arrow-right-3-icon.svg": "/static/media/arrow-right-3-icon.d415f77e8dc81ff77fdb53c0ee2da771.svg",
     "main.5bc4f6bc.css.map": "/static/css/main.5bc4f6bc.css.map",
-    "main.d244587b.js.map": "/static/js/main.d244587b.js.map",
+    "main.aa943cec.js.map": "/static/js/main.aa943cec.js.map",
     "453.2ec29648.chunk.js.map": "/static/js/453.2ec29648.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5bc4f6bc.css",
-    "static/js/main.d244587b.js"
+    "static/js/main.aa943cec.js"
   ]
 }
