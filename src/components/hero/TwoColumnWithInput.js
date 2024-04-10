@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import styled from "styled-components";
+import { handleUpdateSubscription } from 'Util';
 
 import tw from "twin.macro";
 //eslint-disable-next-line
@@ -47,38 +49,7 @@ const CustomersLogoStrip = styled.div`
 `;
 
 export default ({ roundedHeaderButton }) => {
-  const [email, setEmail] = React.useState("");
-
-  const handleUpdatesSubscription = async (e) => {
-    e.preventDefault();
-    // send the form data to sendfox as params
-    const params = new URLSearchParams();
-    params.append('email', email);
-    params.append('list', '496065');
-    const url = `https://api.sendfox.com/contacts?${params.toString()}`;
-    
-    const response = await fetch(url, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",//"http://localhost:3000",
-          // tells the browser that the server allows requests with the access-control-allow-origin header from any origin
-          "Access-Control-Allow-Headers": "*",//"Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With",
-          "Authorization": `Bearer ${process.env.REACT_APP_SENDFOX_TOKEN}`,
-          "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-      },      
-      body: JSON.stringify({})      //JSON.stringify({ email })
-    });
-
-    if (response.ok) {
-      alert('Email submitted successfully!');
-      setEmail('');
-    } else {
-      alert('There was an error. Please try again.');
-    }
-  }
-
+  const form = useRef();
   return (
     <>
       <Header roundedHeaderButton={roundedHeaderButton} />
@@ -92,22 +63,19 @@ export default ({ roundedHeaderButton }) => {
               APICove is a curated, well-documented API hub that connects to the vast world of integrations and takes your product to the next level.
             </Paragraph>
             <Actions>
-              <form 
-                onSubmit={handleUpdatesSubscription}
-                tw="flex flex-col sm:flex-row items-center" 
+              <form
+                ref={form} onSubmit={(e) => handleUpdateSubscription(e, form)}
+                tw="flex flex-col sm:flex-row items-center"
               >
                 <input
                   type="email"
-                  id="sendfox_form_email"
                   name="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
                   required
                   tw="sm:w-3/4 w-full"
                   placeholder="Your E-mail Address"
+                  // value={email}
+                  // onChange={(e) => setEmail(e.target.value)}
                 />
-                {/* input hidden */}
-                <input type="hidden" name="lists[]" value="496065" />
                 <button type="submit">Get Updates</button>
               </form>
             </Actions>

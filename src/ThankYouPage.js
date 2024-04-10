@@ -32,14 +32,6 @@ export default () => {
   window.gtag("js", new Date());
   window.gtag("config", "UA-xxxxxx-1");
 
-  const downloadUrl = "/APICove-ui.zip"
-  React.useEffect(() => {
-    var iframe = document.createElement("iframe");
-    iframe.style.display = "none";
-    iframe.src = downloadUrl
-    document.body.appendChild(iframe);
-  }, [])
-
   return (
     <AnimationRevealPage disabled>
       <Container tw="-mx-8 -mt-8 pt-8 px-8">
@@ -50,38 +42,37 @@ export default () => {
               APICove
             </LogoLink>
             <div tw="flex flex-col lg:flex-row items-center">
-              <NavLink target="_blank" href="https://owaiskhan.me/post/free-tailwindcss-react-ui-kit">
+              <NavLink target="_blank" href="#">
                 License & Usage
               </NavLink>
-              <NavLink target="_blank" href="https://twitter.com/owaiswiz">
+              <NavLink target="_blank" href="https://twitter.com/larebelion">
                 Twitter
               </NavLink>
-              <NavLink target="_blank" href="https://owaiskhan.me">
-                Who Am I ?
+              <NavLink target="_blank" href="https://rebelion.la">
+                Who Are We ?
               </NavLink>
-              <PrimaryNavLink target="_blank" href="https://gum.co/QaruQ">
-                Download Now
+              <PrimaryNavLink target="_blank" href="/login">
+                Login
               </PrimaryNavLink>
             </div>
           </NavRow>
           <HeroRow>
             <Heading>Thank You!</Heading>
-            <Description tw="mt-12">Your Download Will Begin Shortly. If it does not, <NavLink href={downloadUrl} download>click this link</NavLink>.</Description>
+            {/* <Description tw="mt-12">Your Download Will Begin Shortly. If it does not, <NavLink href={downloadUrl} download>click this link</NavLink>.</Description> */}
             <div tw="mt-12 text-center">
-              I am working on another library similar to APICove, with <span tw="font-bold">more components</span> and a much <span tw="font-bold">better developer
-              experience</span>.
+              We are working on much more tools and libraries to help developers build better products, similar to APICove, always with <span tw="font-bold">best developer
+              experience</span> in mind. Stay tuned!
             </div>
             <div tw="mt-12 text-center">
-              If you liked APICove and would like to get updates on the library I am working on among other things, do <span tw="font-bold">follow</span> me on
-              Twitter/GitHub.
+              If you like APICove and want to be notified when new features are released, subscribe to the newsletter and follow us on LinkedIn.
               <div tw="mt-12 flex flex-col items-center">
                 <a
-                  href="https://twitter.com/owaiswiz?ref_src=twsrc%5Etfw"
-                  className="twitter-follow-button"
+                  href="https://linkedin.com/company/rebelion"
+                  className="linkedin-follow-button"
                   data-size="large"
                   data-show-count="true"
                 >
-                  Follow @TwitterDev
+                  Follow @LinkedIn
                 </a>
                 {/* <div tw="mt-8">
                   <GitHubButton

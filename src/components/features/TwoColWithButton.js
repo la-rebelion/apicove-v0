@@ -48,8 +48,8 @@ export default ({
     </>
   ),
   description = "In a rapidly evolving industry, flexibility is key to maintaining your edge. APICove is designed to adapt to your ever-changing needs, ensuring that you're always one step ahead of the competition. Embrace the future with confidence and let APICove be your guide.",
-  primaryButtonText = "Learn More",
-  primaryButtonUrl = "https://apicove.com",
+  primaryButtonText = "Subscribe to Waitlist",
+  primaryButtonUrl = "#subscribe-footer",
   imageSrc = TeamIllustrationSrc,
   buttonRounded = true,
   imageRounded = true,

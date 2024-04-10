@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useRef } from 'react';
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
+import { handleUpdateSubscription } from 'Util';
 
 import LogoImage from "images/logo.png";
-import { ReactComponent as FacebookIcon } from "images/facebook-icon.svg";
+import { ReactComponent as LinkedInIcon } from "images/linkedin-icon.svg";
 import { ReactComponent as TwitterIcon } from "images/twitter-icon.svg";
 import { ReactComponent as YoutubeIcon } from "images/youtube-icon.svg";
 
@@ -47,6 +48,7 @@ const SocialLink = styled.a`
 `;
 
 export default () => {
+  const form = useRef();
   return (
     <Container>
       <Content>
@@ -64,7 +66,7 @@ export default () => {
                 <Link href="#">Support</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="#">About Us</Link>
+                <Link href="https://rebelion.la">About Us</Link>
               </LinkListItem>
             </LinkList>
           </Column>
@@ -72,7 +74,7 @@ export default () => {
             <ColumnHeading>Product</ColumnHeading>
             <LinkList>
               <LinkListItem>
-                <Link href="#">Log In</Link>
+                <Link href="/login">Log In</Link>
               </LinkListItem>
               <LinkListItem>
                 <Link href="#">Personal</Link>
@@ -120,13 +122,18 @@ export default () => {
             </LinkList>
           </Column>
           <SubscribeNewsletterColumn>
-            <SubscribeNewsletterContainer>
+            <SubscribeNewsletterContainer id='subscribe-footer'>
               <ColumnHeading>Subscribe to our Newsletter</ColumnHeading>
               <SubscribeText>
                 We deliver high quality blog posts and news about APICove. And we promise no spam.
               </SubscribeText>
-              <SubscribeForm method="get" action="#">
-                <Input type="email" placeholder="Your Email Address" />
+              <SubscribeForm ref={form} onSubmit={(e) => handleUpdateSubscription(e, form)}>
+                <Input 
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="Your Email Address" 
+                />
                 <SubscribeButton type="submit">Subscribe</SubscribeButton>
               </SubscribeForm>
             </SubscribeNewsletterContainer>
@@ -140,13 +147,13 @@ export default () => {
           </LogoContainer>
           <CopywrightNotice>&copy; {new Date().getFullYear()} La Rebelion Labs. All Rights Reserved.</CopywrightNotice>
           <SocialLinksContainer>
-            <SocialLink href="https://facebook.com">
-              <FacebookIcon />
+            <SocialLink href="https://linkedin.com/company/larebelion-labs">
+              <LinkedInIcon />
             </SocialLink>
-            <SocialLink href="https://twitter.com">
+            <SocialLink href="https://twitter.com/larebelion">
               <TwitterIcon />
             </SocialLink>
-            <SocialLink href="https://youtube.com">
+            <SocialLink href="https://youtube.com/@larebelion">
               <YoutubeIcon />
             </SocialLink>
           </SocialLinksContainer>

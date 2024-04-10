@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 
 import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
+import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import Hero from "components/hero/TwoColumnWithInput.js";
 import Features from "components/features/DashedBorderSixFeatures";
@@ -25,6 +26,7 @@ import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sig
 export default () => {
   //const HighlightedText = tw.span`text-primary-500`;  
   const HighlightedText = tw.span`bg-primary-500 text-gray-100 px-4 transform -skew-x-12 inline-block`;
+  const Subheading = tw(SubheadingBase)`mb-4`;
 
   return (
     <>
@@ -36,14 +38,7 @@ export default () => {
       </Helmet>
       <AnimationRevealPage>
         <Hero roundedHeaderButton={true} />
-        {/* <Features />
-      <MainFeature
-        subheading={<Subheading>Adapt and Thrive</Subheading>}
-        imageSrc={prototypeIllustrationImageSrc}
-        imageBorder={true}
-        imageDecoratorBlob={true}
-      /> */}
-
+        {/* <Features /> */}
         {/* TabGrid Component also accepts a tabs prop to customize the tabs and its content directly. Please open the TabGrid component file to see the structure of the tabs props.*/}
         <TabGrid
           heading={
@@ -213,7 +208,13 @@ export default () => {
             }
           ]}
         />
-        <GetStarted />
+        {/* <GetStarted /> */}
+        <MainFeature
+          subheading={<Subheading>Adapt and Thrive</Subheading>}
+          imageSrc={prototypeIllustrationImageSrc}
+          imageBorder={true}
+          imageDecoratorBlob={true}
+        />
         <Footer />
       </AnimationRevealPage>
     </>
