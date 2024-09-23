@@ -30,7 +30,7 @@ export default () => {
    * Remove this part and the the gtag script inside public/index.html if you dont need google analytics
    */
   window.gtag("js", new Date());
-  window.gtag("config", "UA-xxxxxx-1");
+  window.gtag("thankyou", "G-R63DV8HNZS");
 
   return (
     <AnimationRevealPage disabled>
@@ -74,16 +74,6 @@ export default () => {
                 >
                   Follow @LinkedIn
                 </a>
-                {/* <div tw="mt-8">
-                  <GitHubButton
-                    href="https://github.com/owaiswiz"
-                    data-size="large"
-                    data-show-count="true"
-                    aria-label="Follow @owaiswiz on GitHub"
-                  >
-                    Follow @owaiswiz
-                  </GitHubButton>
-                </div> */}
               </div>
             </div>
           </HeroRow>

@@ -104,6 +104,7 @@ import LoginPage from "./pages/Login.js";
 
 // import ComponentRenderer from "ComponentRenderer.js";
 import ThankYouPage from "ThankYouPage.js";
+import DownloadsPage from "DownloadsPage.js";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -122,6 +123,7 @@ export default function App() {
           <Route path="/components/:type/:name" element={<ComponentRenderer />} /> */}
             <Route path="/login" element={<LoginPage />} />
             <Route path="/thank-you" element={<ThankYouPage />} />
+            <Route path="/downloads" element={<DownloadsPage />} />
             <Route path="/" element={<SaaSProductLandingPage />} />
           </Routes>
         </HelmetProvider>
